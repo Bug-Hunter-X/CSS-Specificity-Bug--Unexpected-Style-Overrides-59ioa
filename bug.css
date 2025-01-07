@@ -1,0 +1,1 @@
+The CSS specificity rules can lead to unexpected results when multiple styles affect the same element.  For example, an inline style might override a style from an embedded stylesheet or an external stylesheet, even if the external stylesheet has a higher priority in terms of the cascade. This can be particularly difficult to debug when working with complex CSS structures.
