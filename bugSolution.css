@@ -1,0 +1,21 @@
+To solve specificity issues, follow these best practices:
+
+1. **Use !important sparingly:** While it overrides specificity, overuse leads to hard-to-maintain code.  It's best to refactor your CSS to avoid needing !important.
+2. **Be mindful of inline styles:** Avoid them whenever possible, as they have the highest specificity.
+3. **Organize your CSS:** Use a CSS methodology like BEM or OOCSS to ensure styles are well-organized and predictable.
+4. **Use the browser's developer tools:** Inspect the element to see which styles are applied and their order of precedence.  Use this to understand and resolve conflicts.
+
+```css
+/* bugSolution.css */
+.container {
+  background-color: lightblue; /* Higher specificity selector to override the more general style */
+}
+
+.container p {
+  color: darkblue; /* More specific selector for paragraph */
+}
+
+.container span {
+  color: green; /* Even more specific selector for span */
+}
+```
